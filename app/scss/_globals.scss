@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: $font_15px;
+    padding: 0 $font_30px;
+    background-color: $neutralVeryLightGray;
+}
+.container {
+    min-width: $font_375px;
+    max-width: $font_1440px;
+}
+header {
+    text-align: center;
+
+    @include breakpoint-down(medium) {
+        padding: $font_90px $font_40px $font_75px $font_40px;
+    }
+    
+    @include breakpoint-up(large) {
+        padding: $font_90px $font_40px $font_65px $font_40px;
+        max-width: $font_600px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-weight: 200;
+        color: $neutralVeryDarkBlue;
+
+        @include breakpoint-down(medium) {
+            font-size: $font_24px;
+        }
+
+        @include breakpoint-up(large) {
+            font-size: $font_37px;
+        }
+
+        span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: $font_16px;
+        }
+    }
+
+    p {
+        color: $neutralGrayishBlue;
+    }
+
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $font_80px;
+
+    @include breakpoint-down(medium) {
+        flex-direction: column;
+    }
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+    }
+}
+.card {
+    background-color: white;
+    position: relative;
+    box-shadow:  $font_3px  $font_8px  $font_20px rgba(76,87,97,0.3);
+    border-radius:  $font_5px;
+
+    @include breakpoint-down(medium) {
+        padding-left: $font_30px;
+        padding-right: $font_30px;
+        padding-top:  $font_25px;
+        width: $font_310px;
+        height: $font_225px;
+        margin-bottom:  $font_25px;
+    }
+
+    @include breakpoint-up(large) {
+        padding-left: $font_32px;
+        padding-right: $font_32px;
+        padding-top:  $font_31px;
+        width: $font_350px;
+        height: $font_250px;
+        margin-left:  $font_15px;
+        margin-right:  $font_15px;
+        margin-bottom:  $font_30px;
+    }
+
+    &__supervisor {
+        border-top:  $font_5px solid $primaryCyan;
+    }
+
+    &__team_builder {
+        border-top:  $font_5px solid $primaryRed;
+    }
+
+    &__karma {
+        border-top:  $font_5px solid $primaryOrange;
+    }
+
+    &__calculator {
+        border-top:  $font_5px solid $primaryBlue;
+    }
+
+    h2 {
+        font-size: $font_21px;
+        color: $neutralVeryDarkBlue;
+    }
+
+    p {
+        font-size: $font_13px;
+        color: $neutralGrayishBlue; 
+        
+        @include breakpoint-down(medium) {
+            margin-top:  $font_8px;
+        }
+        
+        @include breakpoint-up(large) {
+            margin-top:  $font_13px;
+        }
+    }
+    img {
+        position: absolute;
+
+        @include breakpoint-down(medium) {
+            bottom: $font_30px;
+            right: $font_30px;
+            width: $font_58px;
+        }
+
+        @include breakpoint-up(large) {
+            bottom: $font_32px;
+            right: $font_32px;
+            width: $font_65px;
+        }
+    }
+
+} 
